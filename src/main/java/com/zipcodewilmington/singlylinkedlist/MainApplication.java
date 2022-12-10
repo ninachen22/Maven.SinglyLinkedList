@@ -12,7 +12,11 @@ public class MainApplication {
         sll.add(20);
         sll.add(30);
         sll.add(40);
-        System.out.println(sll.getLength());
+//        System.out.println(sll.getLength());
+//        System.out.println(sll.toString());
+//        System.out.println(sll.getValue(3));
+
+        sll.remove(2);
         System.out.println(sll.toString());
     }
 }

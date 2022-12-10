@@ -22,6 +22,27 @@ public class SinglyLinkedList<T> {
         length++;
     }
 
+    public void remove(int index) {
+        Node temp = head;
+        if (index == 0) {
+            head = head.getNext();
+            length--;
+        } else {
+            for (int i = 0; i < length; i++) {
+                if (i + 1 == index && index != length - 1) {
+                    temp.next = temp.next.getNext();
+                    length--;
+                }
+                if (i + 1 == index && index == length - 1) {
+                    temp.next = null;
+                    tail = temp;
+                    length--;
+                    break;
+                }
+            }
+        }
+    }
+
     public int getLength() {
         return length;
     }
