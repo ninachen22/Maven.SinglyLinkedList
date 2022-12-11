@@ -1,5 +1,7 @@
 package com.zipcodewilmington.singlylinkedlist;
 
+import java.util.Comparator;
+
 /**
  * Created by leon on 1/10/18.
  */
@@ -24,7 +26,7 @@ public class SinglyLinkedList<T> {
 
     public void remove(int index) {
         Node temp = head;
-        if (index > length -1 || index < 0) { // || index < 0
+        if (index > length - 1 || index < 0) { // || index < 0
             System.out.println("Index does not exist.");
         }
         if (index == 0) {
@@ -93,9 +95,29 @@ public class SinglyLinkedList<T> {
         }
         return newSll;
     }
-//    public SinglyLinkedList sort() {
-//
-//    }
+
+    public void sort() {
+//        Node temp = head;
+//        for (int i = 0; i < length; i++) {
+//            if (temp.getData().compareTo(temp.getNext()) > 0)
+//        }
+
+//        Node temp = head;
+//        for (int i = 0; i < length - 1; i++) {
+//            for (int j = 1; j < length; j++) {
+//                if ((Integer) getValue(i) < (Integer) getValue(j)) {
+////                    int beg = (Integer) temp.data;
+////                    Node mid = temp.next;
+////                    int end = (Integer) getValue(j);
+//                    add((T) temp.data);
+//                    temp.next = temp.next.getNext();
+//                    remove(i);
+//                }
+//                temp = temp.next;
+//            }
+//            temp = temp.next;
+//        }
+    }
 
     public String toString() {
         StringBuilder sb = new StringBuilder();
